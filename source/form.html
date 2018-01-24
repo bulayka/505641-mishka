@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Mishka-form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="../css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -42,9 +42,9 @@
         <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-        <fieldset class="order-form__feeldset order-form__feeldset--type">
-          <div class="order-form__feeldset-wrapper">
-            <span class="order-form__feeldset-title">Тип</span>
+        <fieldset class="order-form__fieldset order-form__fieldset--type">
+          <div class="order-form__fieldset-wrapper">
+            <span class="order-form__fieldset-title">Тип</span>
             <ul class="order-form__list">
               <li class="order-form__list-item order-form__list-item--type">
                 <input type="radio" value="" name="" id="radio-btn1" checked>
@@ -58,9 +58,9 @@
           </div>
         </fieldset>
 
-        <fieldset class="order-form__feeldset order-form__feeldset--color">
-          <div class="order-form__feeldset-wrapper">
-            <span class="order-form__feeldset-title">Цвет</span>
+        <fieldset class="order-form__fieldset order-form__fieldset--color">
+          <div class="order-form__fieldset-wrapper">
+            <span class="order-form__fieldset-title">Цвет</span>
             <ul class="order-form__list">
               <li class="order-form__list-item order-form__list-item--color">
                 <input type="checkbox" value="" name="" id="checkbox-color1" checked>
@@ -90,19 +90,19 @@
           </div>
         </fieldset>
 
-        <fieldset class="order-form__feeldset order-form__feeldset--client-fio">
-          <div class="order-form__feeldset-wrapper">
-            <span class="order-form__feeldset-title">ФИО</span>
+        <fieldset class="order-form__fieldset order-form__fieldset--client-fio">
+          <div class="order-form__fieldset-wrapper">
+            <span class="order-form__fieldset-title">ФИО</span>
             <ul class="order-form__list">
-              <li class="order-form__list order-form__list-item--fio">
+              <li class="order-form__list-item order-form__list-item--fio">
                 <label for="name1">Имя:</label>
                 <input type="text" name="client-name" placeholder="Введите ваше имя*" id="name1">
               </li>
-              <li class="order-form__list order-form__list-item--fio">
+              <li class="order-form__list-item order-form__list-item--fio">
                 <label for="name2">Фамилия:</label>
                 <input type="text" name="client-name" placeholder="Укажите фамилию*" id="name2">
               </li>
-              <li class="order-form__list order-form__list-item--fio">
+              <li class="order-form__list-item order-form__list-item--fio">
                 <label for="name3">Отчество:</label>
                 <input type="text" name="client-name" placeholder="Отчество, если желаете" id="name3">
               </li>
@@ -110,26 +110,26 @@
           </div>
         </fieldset>
 
-        <fieldset class="order-form__feeldset order-form__feeldset--client-contacts">
-          <div class="order-form__feeldset-wrapper">
-            <span class="order-form__feeldset-title">ТЕЛ</span>
+        <fieldset class="order-form__fieldset order-form__fieldset--client-contacts">
+          <div class="order-form__fieldset-wrapper">
+            <span class="order-form__fieldset-title">ТЕЛ</span>
             <ul class="order-form__list order-form__list-phone">
-              <li class="order-form__list-item--contacts">
+              <li class="order-form__list-item order-form__list-item--contacts">
                 <input type="text" name="" placeholder="+7 ХХХ ХХ ХХ*">
               </li>
             </ul>
-            <span class="order-form__feeldset-title">E-MAIL</span>
+            <span class="order-form__fieldset-title">E-MAIL</span>
             <ul class="order-form__list order-form__list-mail">
-              <li class="order-form__list-item--contacts">
+              <li class="order-form__list-item order-form__list-item--contacts">
                 <input type="text" name="" placeholder="Ваш Email*">
               </li>
             </ul>
           </div>
         </fieldset>
 
-        <fieldset class="order-form__feeldset order-form__feeldset--addition">
-          <div class="order-form__feeldset-wrapper">
-            <span class="order-form__feeldset-title">ДОП</span>
+        <fieldset class="order-form__fieldset order-form__fieldset--addition">
+          <div class="order-form__fieldset-wrapper">
+            <span class="order-form__fieldset-title">ДОП</span>
             <ul class="order-form__list order-form__list-addition">
               <li class="order-form__list-item order-form__list-item--addition">
                 <textarea name="" id="" placeholder="Опишите все ваши  пожелания к заказу" rows="10" cols="25"></textarea>
