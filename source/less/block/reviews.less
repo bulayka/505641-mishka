@@ -1,10 +1,19 @@
 .reviews {
+  display: flex;
+
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  border: 1px solid red;   /* Временно для сетки */
 
   &__wrapper {
     .wrapper();
+  }
+
+  .slider {
+      border: 1px solid red;   /* Временно для сетки */
+      display: flex;
+      flex-direction: column;
   }
 
   &__title {
@@ -20,7 +29,7 @@
   }
 
   &__review-text {
-
+    width: 260px;
   }
 
   &__author-name {
@@ -43,4 +52,32 @@
     text-transform: uppercase;
     margin-top: 40px 0;
   }
+
+    @media (min-width: @tablet-width) {
+      &__wrapper {
+        width: 668px;
+        padding: 0 50px;
+      }
+
+      &__review-text {
+        width: 642px;
+      }
+
+      .slider {
+        width: 668px;
+        height: 459px;
+        background-image: url("../img/review@1x.jpg");
+        background-position: left;
+        background-repeat: no-repeat;
+      }
+    }
+    @media (min-width: @desktop-width) {
+      &__wrapper {
+        width: 1050px;
+      }
+
+      .slider__item {
+        width: 875px;
+      }
+    }
 }

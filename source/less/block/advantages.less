@@ -2,6 +2,8 @@
   font-size: @main-font-size;
   line-height: 20px;
   margin-top: 30px;
+  border: 1px solid red;
+  display: flex;
 
   &__wrapper {
     .wrapper();
@@ -14,15 +16,18 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
     font-weight: bold;
+    border: 1px solid red;
 
   }
   &__item {
     margin-bottom: 25px;
-
+    border: 1px solid red;
 
     &--ecology {
       width: 175px;
@@ -42,5 +47,29 @@
     &--packaging {
       width: 198px;
     }
-}
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__wrapper {
+      width: 668px;
+      padding: 0 50px;
+    }
+    &__list {
+      width: 668px;
+      height: 425px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 332px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      width: 1050px;
+
+    }
+  }
 }
