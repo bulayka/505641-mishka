@@ -1,10 +1,17 @@
 .production-process {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
   &__wrapper {
     .wrapper();
+
+    border: 1px solid red;
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ececec;
     margin-bottom: 55px;
   }
@@ -31,5 +38,31 @@
     text-transform: uppercase;
     font-weight: 700;
     color: @color-text-brown;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__item {
+      width: 668px;
+      height: 745px;
+    }
+
+
+  }
+
+  @media (min-width: @desktop-width) {
+    &__item {
+      height: 455px;
+      width: 1050px;
+      flex-direction: row;
+    }
+
+    &__video {
+      width: 683px;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

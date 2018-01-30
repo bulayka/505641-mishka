@@ -1,16 +1,27 @@
 .catalog {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
   &__wrapper {
     .wrapper();
+
+    border: 1px solid red;
   }
 
   &__item {
+    width: 100%;
     border: 1px solid #ededed;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    &-description {
+
+    }
   }
 
   &__item-title {
-    width: 200px;
     font-size: @main-font-size;
     line-height: 24px;
     font-weight: 700;
@@ -28,5 +39,32 @@
     color: @main-color-text;
     font-weight: bold;
     padding-bottom: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__item {
+      height: 334px;
+      flex-direction: row;
+      &-description {
+        width: 334px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      width: 315px;
+      height: 660px;
+      flex-direction: column;
+    }
+
+    flex-direction: row;
   }
 }
