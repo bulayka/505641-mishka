@@ -2,8 +2,11 @@
   font-size: 15px;
   line-height: 30px;
   color: @color-text-brown;
+  border: 1px solid red;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     .wrapper();
   }
 
@@ -15,6 +18,11 @@
 
   &__description {
     width: 260px;
+    border: 1px solid red;
+  }
+
+  &__map {
+    border: 1px solid red;
   }
 
   &__info--email {
@@ -28,5 +36,41 @@
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 40px 0;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__wrapper {
+      width: 668px;
+      padding: 0 50px;
+    }
+
+    &__map {
+      width: 668px;
+    }
+
+    &__description {
+      width: 668px;
+      display: flex;
+      // flex-direction: column;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      width: 1050px;
+      padding: 0 50px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__description {
+      flex-direction: column;
+      width: 50%;
+    }
+
+    &__map {
+      width: 50%;
+    }
   }
 }

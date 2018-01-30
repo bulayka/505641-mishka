@@ -1,11 +1,9 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  background: green;
   font-size: @main-font-size;
   line-height: 24px;
   font-weight: bold;
-
   border: 1px solid red;  /* Временно для сетки */
 
   &__wrapper {
@@ -16,11 +14,8 @@
     display: flex;
     justify-content: center;
     height: 80px;
-
     border: 1px solid red;  /* Временно для сетки */
   }
-
-
 
   .main-nav {
     border: 1px solid red;
@@ -44,25 +39,24 @@
   }
 
   @media (min-width: @tablet-width) {
-    .page-header {
-      background-color: orange;
-    }
+      flex-direction: row;
+      width: auto;
+
 
     .main-nav {
+      display: flex;
+      flex-direction: row;
       /* Временно для сетки */
-      min-height: 600px;
+      min-height: 100px;
     }
+
   }
-
-
 
   @media (min-width: @desktop-width) {
     .main-nav {
       /* Временно для сетки */
-      min-height: 1200px;
+
     }
-    .page-header {
-      background-color: yellow;
-    }
+
   }
 }
