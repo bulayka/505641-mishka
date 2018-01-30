@@ -14,6 +14,7 @@
   }
 
   &__fieldset {
+    display: flex;
 
     &-title {
       color: @color-lightgreen;
@@ -21,6 +22,8 @@
     }
   }
   &__list {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
   }
@@ -46,5 +49,61 @@
 
     &__button {
       color: @color-text-brown;
+    }
+
+    @media (min-width: @tablet-width) {
+      &__description {
+        width: 620px;
+      }
+      &__list-color {
+        width: 400px;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      &__fieldset {
+        &-wrapper {
+          display: flex;
+          &--client-contacts,
+          &--addition {
+            flex-direction: column;
+          }
+        }
+        &-title {
+          width: 170px;
+        }
+        &-tel,
+        &-mail {
+          display: flex;
+        }
+      }
+      &__addition,
+       {
+        display: flex;
+      }
+      &__require {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      &__list-item--type {
+        width: 255px;
+      }
+      &__list-item--color {
+        width: 200px;
+      }
+    }
+    @media (min-width: @desktop-width) {
+      &__description {
+        width: 680px;
+        padding: 0 175px;
+      }
+      &__list-color {
+        width: 700px;
+        height: 100px;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
 }
