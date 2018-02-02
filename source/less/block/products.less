@@ -7,6 +7,8 @@
   }
 
   &__title {
+    width: 320px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-image: url(../img/hero-mobile@1x.jpg);
@@ -14,6 +16,7 @@
     background-repeat: no-repeat;
 
     h2 {
+      width: 260px;
       font-size: 27px;
       line-height: 30px;
       text-align: center;
@@ -28,9 +31,21 @@
   }
   &__list-item {
     margin: 0;
-    padding: 20px;
+    padding: 26px 30px;
   }
-  &__list-item--interior {
+
+  &__list-item--interior,
+  &__list-item--toys {
+    position: relative;
+    cursor: pointer;
+    svg {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      path {
+        // fill: @color-lightgreen;
+      }
+    }
     background-color: @color-lightgreen;
     &:hover {
       background-color: @color-lightgreen-hover;
@@ -40,6 +55,10 @@
     }
   }
   &__list-item--toys {
+    svg {
+      right: 20px;
+      top: 25px;
+    }
     background-color: @color-darkgreen;
     &:hover {
       background-color: @color-darkgreen-hover;
@@ -130,6 +149,7 @@
     }
 
     &__title {
+        width: 668px;
       background-size: cover;
       h2 {
         width: 500px;
@@ -167,7 +187,7 @@
         position: absolute;
         top: -100px;
         display: flex;
-        width: 100%;
+        width: 668px;
         justify-content: space-between;
         h2 {
           font-size: 43px;
@@ -206,6 +226,7 @@
     }
 
     &__title {
+      width: 1050px;
       background-size: cover;
       h2 {
         width: 620px;
