@@ -3,67 +3,165 @@
   &__wrapper {
     .wrapper();
   }
-
   &__description {
-    width: 242px;
+    width: 260px;
     font-size: 13px;
     line-height: 24px;
     color: @color-text-brown;
     padding: 0;
-    margin: 25px 0;
+    padding-top: 25px;
+    margin: 0;
   }
 
   &__fieldset {
     display: flex;
+    border: none;
+    padding: 0;
+    padding-top: 25px;
+    margin: 0;
 
     &-title {
+      position: relative;
+      display: block;
       color: @color-lightgreen;
-      margin-bottom: 10px;
+      font-size: @main-font-size;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      &::before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        content: "";
+        width: 200px;
+        height: 1px;
+        background-color: @color-lightgreen;
+      }
     }
   }
+
   &__list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
-  }
-
-  &__list-item {
     list-style: none;
+    label {
+      padding: 0;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+    input[type=text] {
+      font-size: @main-font-size;
+      line-height: 18px;
+      color: rgba(51, 51, 51, 0.3);
+      border: none;
+      border-bottom: 2px solid black;
+      padding-bottom: 15px;
+      padding-top: 15px;
+
+      &:hover {
+        border-bottom: 2px solid @color-lightgreen;
+      }
+      &:active {
+
+      }
+    }
+    &-phone {
+      margin-bottom: 25px;
+    }
+  }
+  input[type=radio],
+  input[type=checkbox] {
+    display: none;
+  }
+  &__list-item {
+    display: flex;
+    flex-direction: column;
     color: @main-color-text;
     font-size: @main-font-size;
     line-height: 18px;
     font-weight: 700;
+    vertical-align: middle;
     margin-bottom: 10px;
-
+    padding-left: 60px;
     &--type {
       width: 170px;
     }
+    &--fio,
+    &--contacts,
+    &--addition {
+      position: relative;
+      padding-left: 0;
+    }
+    &--addition {
+      textarea {
+        font-size: 17px;
+        border: none;
+        padding: 20px;
+      }
+      border: 2px solid black;
+      &:hover {
+        border: 2px solid @color-lightgreen;
+      }
+      &:active {
+        border: 2px solid @color-lightgreen;
+      }
+    }
   }
-
-    &__require {
+  &__fieldset-mail {
+    padding-top: 25px;
+  }
+  &__phone-icon,
+  &__mail-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    path {
+      fill: rgba(0, 0, 0, 0.3);
+    }
+    &:hover {
+      path {
+        fill: @color-lightgreen;
+      }
+    }
+  }
+  &__require {
+    padding-bottom: 55px;
+    &-text {
       font-size: 14px;
       line-height: 16px;
       color: @color-text-brown;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 30px;
+      padding-top: 15px;
     }
-
-    &__button {
-      color: @color-text-brown;
+  }
+    &__btn {
+      font-size: @main-font-size;
+      line-height: 16px;
+      background: none;
+      padding: 16px 45px;
     }
 
     @media (min-width: @tablet-width) {
       &__description {
         width: 620px;
+        font-size: @main-font-size;
+        line-height: 30px;
       }
       &__list-color {
-        width: 400px;
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
       }
       &__fieldset {
+        padding: 50px 0;
         &-wrapper {
           display: flex;
+          align-items: baseline;
           &--client-contacts,
           &--addition {
             flex-direction: column;
@@ -71,10 +169,51 @@
         }
         &-title {
           width: 170px;
+          &::before {
+            display: none;
+          }
         }
-        &-tel,
-        &-mail {
+        &--type {
+          padding-bottom: 25px;
+        }
+        &--tel,
+        &--mail {
           display: flex;
+          align-items: baseline;
+        }
+        &--color,
+        &--client-contacts {
+          background: #f1f1f1;
+        }
+      }
+      &__list-item--fio,
+      &__list-item--contacts {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        label {
+          margin-right: 20px;;
+        }
+        input {
+          flex-grow: 1;
+          padding-left: 20px;
+        }
+      }
+      &__list-item--contacts {
+        input {
+          background: #f1f1f1;
+        }
+      }
+      &__list {
+        width: 500px;
+        &-item {
+          margin-bottom: 25px;
+          &--type {
+            width: 255px;
+          }
+          &--color {
+            width: 188px;
+          }
         }
       }
       &__addition,
@@ -82,25 +221,29 @@
         display: flex;
       }
       &__require {
+        width: 100%;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 0;
       }
-      &__list-item--type {
-        width: 255px;
-      }
-      &__list-item--color {
-        width: 200px;
+      &__btn {
+        padding: 16px 30px;
       }
     }
     @media (min-width: @desktop-width) {
       &__description {
         width: 680px;
-        padding: 0 175px;
+        padding: 125px 0;
+        margin-left: 175px;
+      }
+      &__list {
+        width: 700px;
       }
       &__list-color {
-        width: 700px;
-        height: 100px;
+        width: 750px;
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;

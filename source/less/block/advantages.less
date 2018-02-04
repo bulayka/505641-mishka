@@ -2,7 +2,6 @@
   font-size: @main-font-size;
   line-height: 20px;
   margin-top: 30px;
-  border: 1px solid red;
   display: flex;
 
   &__wrapper {
@@ -12,7 +11,8 @@
   &__title {
     font-size: 25px;
     line-height: 30px;
-    font-weight: bold;
+    font-weight: 700;
+    margin-bottom: 25px;
   }
 
   &__list {
@@ -22,12 +22,21 @@
     padding: 0;
     margin: 0;
     font-weight: bold;
-    border: 1px solid red;
-
   }
   &__item {
-    margin-bottom: 25px;
-    border: 1px solid red;
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    path {
+      fill: @color-lightgreen;
+    }
 
     &--ecology {
       width: 175px;
@@ -54,20 +63,43 @@
       width: 668px;
       padding: 0 50px;
     }
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 40px;
+    }
     &__list {
       width: 668px;
-      height: 425px;
-      flex-direction: row;
+      height: 450px;
       flex-wrap: wrap;
     }
     &__item {
-      width: 332px;
+      width: 50%;
+      padding-bottom: 40px;
     }
   }
 
-  // @media (min-width: @desktop-width) {
-  //   &__wrapper {
-  //     width: 1050px;
-  //   }
-  // }
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      width: 1050px;
+    }
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      margin-bottom: 40px;
+      margin-left: 175px;
+    }
+    &__list {
+      margin-left: 175px;
+    }
+    &__item {
+      &--no-import {
+        width: 300px;
+      }
+    }
+  }
 }

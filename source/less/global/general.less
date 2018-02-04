@@ -24,3 +24,21 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.btn {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @color-text-brown;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid @color-text-brown;
+  &:hover {
+    color: #ffffff;
+    background: #444444;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

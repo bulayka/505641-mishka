@@ -1,25 +1,21 @@
 .reviews {
+  position: relative;
   display: flex;
-
   font-size: 15px;
   line-height: 30px;
   color: #444444;
-  border: 1px solid red;   /* Временно для сетки */
+  margin-top: 10px;
 
   &__wrapper {
     .wrapper();
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
-
-  .slider {
-      border: 1px solid red;   /* Временно для сетки */
-      display: flex;
-      flex-direction: column;
-  }
-
   &__title {
     font-size: 25px;
     color: #000000;
-
+    margin-bottom: 25px;
   }
   &__item {
     margin: 0;
@@ -27,57 +23,105 @@
     padding: 0;
     width: 255px;
   }
-
   &__review-text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
     width: 260px;
   }
-
   &__author-name {
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
     color: #000000;
   }
-
   &__author-email {
     font-size: 17px;
     line-height: 30px;
   }
+  &__btn {
+    padding: 15px 80px;
+  }
+  &__slider-controls {
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    margin-bottom: 40px;
+    text-align: center;
 
-  &__button {
-    font-size: 18px;
-    line-height: 24px;
-    color: #444444;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-top: 40px 0;
+    svg {
+      :hover {
+        fill: rgba(0, 0, 0, 0.6);
+      }
+      :active {
+        fill: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  &__prev,
+  &__next {
+    width: 50%;
+    background: none;
+    border: 1px solid #ececec;
+    padding: 10px 30px;
   }
 
-    @media (min-width: @tablet-width) {
-      &__wrapper {
-        width: 668px;
-        padding: 0 50px;
-      }
+  @media (min-width: @tablet-width) {
 
-      &__review-text {
-        width: 642px;
-      }
-
-      .slider {
-        width: 668px;
-        height: 459px;
-        background-image: url("../img/review@1x.jpg");
-        background-position: left;
-        background-repeat: no-repeat;
-      }
+    &__wrapper {
+      width: 668px;
+      padding: 0;
+      background-image: url("../img/review@1x.jpg");
+      background-position: left;
+      background-repeat: no-repeat;
     }
-    @media (min-width: @desktop-width) {
-      &__wrapper {
-        width: 1050px;
-      }
-
-      .slider__item {
-        width: 875px;
-      }
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 50px;
     }
+    &__review-text {
+      width: 642px;
+      margin-bottom: 60px;
+    }
+    &__author {
+      width: 240px;
+    }
+    &__slider-controls {
+      position: absolute;
+      width: 170px;
+      bottom: 0;
+      right: 20px;
+    }
+    &__prev,
+    &__next {
+      border: none;
+    }
+    &__btn {
+      position: absolute;
+      padding: 15px 40px;
+      top: 40px;
+      right: 0;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      width: 1050px;
+      position: relative;
+      padding: 0;
+    }
+    &__item {
+      margin-left: 175px;
+    }
+    &__title {
+      font-size: 50px;
+      line-height: 57px;
+      margin-bottom: 55px;
+      margin-left: 175px;
+    }
+    &__review-text {
+      width: 780px;
+      margin-bottom: 55px;
+    }
+  }
 }
