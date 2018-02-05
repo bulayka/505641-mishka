@@ -4,44 +4,37 @@
   color: @color-text-brown;
   margin-top: 40px;
   margin-bottom: 40px;
-
   &__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     .wrapper();
   }
-
   &__title {
     font-size: 18px;
     line-height: 30px;
     color: @main-color-text;
   }
-
   &__flag {
     display: none;
   }
-
   &__description {
     display: flex;
     flex-direction: column;
     width: 260px;
     margin-bottom: 40px;
   }
-
   &__text {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
-
   &__adress {
     width: 150px;
     margin-left: 30px;
     margin-right: auto;
   }
-
   &__info--email {
     text-decoration: none;
     color: @color-text-brown;
@@ -56,20 +49,31 @@
       opacity: 0.3;
     }
   }
-
   &__map {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
     margin-bottom: 30px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: "";
+      width: 67px;
+      height: 100px;
+      background-image: url("../img/icon-map-pin.svg");
+      background-repeat: no-repeat;
+      margin-left: -34px;
+      margin-top: -50px;
+    }
   }
-
   &__info--email {
     border-bottom: 1px solid #62d1ba;
   }
-
   &__btn {
     width: 256px;
     padding: 15px 0;
   }
-
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
     &__wrapper {
@@ -103,23 +107,28 @@
       width: 150px;
       padding: 15px 38px;
     }
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 100px;
-    &__wrapper {
-      width: 1050px;
-      padding: 0 50px;
-      height: 460px;
-      flex-direction: row;
-      justify-content: space-between;
+    &__map {
+      width: 768px;
     }
-
+  }
+  @media (min-width: @desktop-width) {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    width: 1050px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__wrapper {
+      padding: 0;
+    }
     &__description {
       flex-direction: column;
       width: 350px;
     }
-
     &__title {
       position: relative;
       h2 {
@@ -140,22 +149,23 @@
     &__info--email {
       margin-bottom: 30px;
     }
-
     &__flag {
       position: absolute;
       top: 30px;
       left: -115px;
     }
-
-
     &__btn {
       position: absolute;
-      bottom: 0;
+      bottom: 8px;
       left: 225px;
       height: 20px;
       font-size: 17px;
       width: 150px;
       padding: 15px 38px;
+    }
+    &__map {
+      width: 525px;
+      margin: 0;
     }
   }
 }

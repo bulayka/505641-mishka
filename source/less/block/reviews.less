@@ -5,7 +5,6 @@
   line-height: 30px;
   color: #444444;
   margin-top: 10px;
-
   &__wrapper {
     .wrapper();
     position: relative;
@@ -48,7 +47,6 @@
     width: 260px;
     margin-bottom: 40px;
     text-align: center;
-
     svg {
       :hover {
         fill: rgba(0, 0, 0, 0.6);
@@ -65,15 +63,17 @@
     border: 1px solid #ececec;
     padding: 10px 30px;
   }
-
   @media (min-width: @tablet-width) {
-
     &__wrapper {
       width: 668px;
       padding: 0;
       background-image: url("../img/review@1x.jpg");
-      background-position: left;
+      background-position: -50px 0;
       background-repeat: no-repeat;
+      @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
+        background-image: url(../img/review@2x.jpg);
+        background-size: 350px auto;
+      }
     }
     &__title {
       font-size: 43px;
@@ -81,7 +81,8 @@
       margin-bottom: 50px;
     }
     &__review-text {
-      width: 642px;
+      width: 645px;
+      font-size: @main-font-size;
       margin-bottom: 60px;
     }
     &__author {
@@ -109,12 +110,13 @@
       width: 1050px;
       position: relative;
       padding: 0;
+        background-position: left;
     }
     &__item {
       margin-left: 175px;
     }
     &__title {
-      font-size: 50px;
+      font-size: 53px;
       line-height: 57px;
       margin-bottom: 55px;
       margin-left: 175px;
