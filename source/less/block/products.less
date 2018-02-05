@@ -1,11 +1,9 @@
 .products {
   font-size: @main-font-size;
   line-height: 24px;
-
   &__wrapper {
     .wrapper();
   }
-
   &__title {
     width: 320px;
     margin: 0 auto;
@@ -14,7 +12,10 @@
     background-image: url(../img/hero-mobile@1x.jpg);
     background-position: center 0;
     background-repeat: no-repeat;
-
+    @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
+      background-image: url(../img/hero-mobile@2x.jpg);
+      background-size: 478px auto;
+    }
     h2 {
       width: 260px;
       font-size: 27px;
@@ -33,7 +34,6 @@
     margin: 0;
     padding: 26px 30px;
   }
-
   &__list-item--interior,
   &__list-item--toys {
     position: relative;
@@ -74,7 +74,6 @@
     color: @white-color-text;
     text-decoration: none;
   }
-
   &__item {
     position: relative;
     display: flex;
@@ -97,7 +96,6 @@
       color: @color-lightgreen;
     }
   }
-
   &__text,
   &__parametres {
     margin: 0;
@@ -105,12 +103,10 @@
     line-height: 24px;
     color: @color-text-brown;
   }
-
   &__text {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   &__parametres {
     padding: 0;
     margin-bottom: 20px;
@@ -124,32 +120,32 @@
       }
     }
   }
-
+  &__product-image {
+    margin-bottom: 130px;
+  }
   &__buy {
+    position: absolute;
+    bottom: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
   &__price {
     text-align: center;
     color: @color-text-brown;
     font-weight: 700;
     margin-bottom: 25px;
   }
-
   .products-btn {
     padding: 15px 80px;
   }
-
   @media (min-width: @tablet-width) {
     &__wrapper {
       width: 668px;
       padding: 0 50px;
     }
-
     &__title {
-        width: 668px;
+      width: 668px;
       background-size: cover;
       h2 {
         width: 500px;
@@ -160,7 +156,6 @@
         margin-bottom: 345px;
       }
     }
-
     &__list {
       flex-direction: row;
       &-item {
@@ -172,12 +167,11 @@
         }
       }
     }
-
     &__item {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      // align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       margin-top: 150px;
       &-description {
@@ -200,32 +194,28 @@
         text-align: center;
       }
     }
-
     &__text {
+      margin-top: -7px;
       margin-bottom: 45px;
     }
-
     &__parametres {
-      margin-bottom: 55px;
+      margin-bottom: 68px;
     }
-
     &__product-image{
       width: 50%;
+      margin-bottom: 0;
     }
-
     .products-button {
       padding-left: 90px;
       padding-right: 90px;
     }
-
   }
-
   @media (min-width: @desktop-width) {
     &__wrapper {
       width: 1050px;
     }
-
     &__title {
+      position: inherit;
       width: 1050px;
       background-size: cover;
       h2 {
@@ -237,9 +227,9 @@
         margin-bottom: 355px;
       }
     }
-
     &__item {
       &-title {
+        top: 50px;
         width: 650px;
         h2 {
           font-size: 53px;
@@ -252,6 +242,7 @@
         left: -130px;
       }
       &-description {
+        margin-top: 185px;
         margin-left: 175px;
       }
     }
