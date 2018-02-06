@@ -29,30 +29,37 @@
   &__list {
     display: flex;
     flex-direction: column;
-  }
-  &__list-item {
-    margin: 0;
-    padding: 26px 30px;
-  }
-  &__list-item--interior,
-  &__list-item--toys {
-    position: relative;
-    cursor: pointer;
-    svg {
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      path {
-        // fill: @color-lightgreen;
+    &-item {
+      margin: 0;
+      padding: 26px 30px;
+      &--interior,
+      &--toys {
+        position: relative;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          right: 30px;
+          top: 20px;
+        }
+      }
+      &--link {
+        path {
+          fill: #3bb09d;
+        }
+      }
+      &:hover {
+        background-color: @color-lightgreen-hover;
+        .products__list-item--link {
+          path {
+            fill: #29a592;
+          }
+        }
+      }
+      &:active {
+        opacity: 0.3;
       }
     }
     background-color: @color-lightgreen;
-    &:hover {
-      background-color: @color-lightgreen-hover;
-    }
-    &:active {
-
-    }
   }
   &__list-item--toys {
     svg {
@@ -64,7 +71,6 @@
       background-color: @color-darkgreen-hover;
     }
     &:active{
-
     }
   }
   &__list-item--link {
