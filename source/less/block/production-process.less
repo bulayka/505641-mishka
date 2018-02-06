@@ -20,7 +20,28 @@
     }
   }
   &__video {
+    position: relative;
     margin-bottom: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 101px;
+      height: 77px;
+      background-image: url(../img/icon-play.svg);
+      background-repeat: no-repeat;
+      margin-left: -50px;
+      margin-top: -38px;
+      cursor: pointer;
+    }
+    &:hover::before {
+        transform: scale(1.2);
+    }
+    &:active::before {
+      opacity: 0.6;
+      transform: scale(0.8);
+    }
   }
   &__title {
     position: absolute;
@@ -59,8 +80,6 @@
 }
   @media (min-width: @tablet-width) {
     &__item {
-      // width: 668px;
-      // height: 745px;
       padding-top: 0;
     }
     &__video {
