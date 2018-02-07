@@ -44,7 +44,6 @@
     margin: 0;
     list-style: none;
     label {
-      padding: 0;
       padding-top: 11px;
       padding-bottom: 11px;
     }
@@ -68,9 +67,56 @@
       margin-bottom: 25px;
     }
   }
-  input[type=radio],
-  input[type=checkbox] {
-    display: none;
+  &__checkbox,
+  &__radiobutton {
+    position: relative;
+    padding-left: 60px;
+    input[type="checkbox"] + .checkbox-indicator,
+    input[type="radio"] + .radiobutton-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 35px;
+      border: 2px solid #444444;
+      &:hover {
+        border: 2px solid @color-lightgreen;
+      }
+      &:active {
+        border: 2px solid rgba(68, 68, 68, 0.3);
+      }
+    }
+    input[type="checkbox"]:checked + .checkbox-indicator::before,
+    input[type="checkbox"]:checked + .checkbox-indicator::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 3px;
+      width: 36px;
+      height: 35px;
+      background-image: url(../img/icon-tick.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+  &__radiobutton {
+    input[type="radio"] + .radiobutton-indicator {
+      top: 10px;
+      border-radius: 50%;
+    }
+    input[type="radio"]:checked + .radiobutton-indicator::before,
+    input[type="radio"]:checked + .radiobutton-indicator::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 16px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: @color-lightgreen;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
   &__list-item {
     display: flex;
@@ -81,9 +127,8 @@
     font-weight: 700;
     vertical-align: middle;
     margin-bottom: 10px;
-    padding-left: 60px;
     &--type {
-      width: 170px;
+      width: 190px;
     }
     &--fio,
     &--contacts,
@@ -143,6 +188,15 @@
     padding: 16px 45px;
   }
   @media (min-width: @tablet-width) {
+    &__checkbox,
+    &__radiobutton {
+      padding-left: 65px;
+    }
+    &__radiobutton {
+      input[type="radio"] + .radiobutton-indicator {
+        top: 0;
+      }
+    }
     &__description {
       width: 620px;
       font-size: @main-font-size;
@@ -150,7 +204,7 @@
     }
     &__list-color {
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
     &__fieldset {
@@ -205,15 +259,14 @@
       &-item {
         margin-bottom: 25px;
         &--type {
-          width: 255px;
+          width: 334px;
         }
         &--color {
           width: 188px;
         }
       }
     }
-    &__addition,
-     {
+    &__addition {
       display: flex;
     }
     &__require {
@@ -221,7 +274,7 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
       padding-top: 40px;
       padding-bottom: 0;
     }
@@ -241,8 +294,12 @@
     &__list-color {
       width: 750px;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       flex-wrap: wrap;
+    }
+    &__require {
+      width: 700px;
+      margin-left: 170px;
     }
   }
 }
