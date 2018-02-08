@@ -1,6 +1,11 @@
 .products {
   font-size: @main-font-size;
   line-height: 24px;
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-position: bottom;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  padding-bottom: 35px;
 
   &__wrapper {
     .wrapper();
@@ -175,12 +180,16 @@
   }
 
   @media (min-width: @tablet-width) {
+    background-size: auto 15px;
+    padding-bottom: 55px;
+
     &__wrapper {
       width: 668px;
       padding: 0 50px;
     }
 
     &__title {
+      position: relative;
       width: 668px;
       background-size: cover;
 
@@ -191,6 +200,18 @@
         font-weight: 700;
         margin-top: 155px;
         margin-bottom: 345px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background-image: url(../img/bg-zigzag-fill.svg);
+        background-position: auto 15px;
+        background-repeat: no-repeat;
       }
     }
 
@@ -261,12 +282,15 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-size: 1050px 23px;
+    background-repeat: no-repeat;
+    padding-bottom: 75px;
+
     &__wrapper {
       width: 1050px;
     }
 
     &__title {
-      position: inherit;
       width: 1050px;
       background-size: cover;
 
@@ -278,9 +302,14 @@
         margin-top: 150px;
         margin-bottom: 355px;
       }
+      &::after {
+        height: 23px;
+        background-position: auto 23px;
+      }
     }
-
     &__item {
+      margin-top: 70px;
+
       &-title {
         top: 50px;
         width: 650px;

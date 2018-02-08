@@ -5,6 +5,11 @@
   line-height: 30px;
   color: #444444;
   margin-top: 10px;
+  padding-bottom: 45px;
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-position: bottom;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
 
   &__wrapper {
     .wrapper();
@@ -76,6 +81,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+    background-size: auto 15px;
+
     &__wrapper {
       width: 668px;
       padding: 0;
@@ -126,6 +134,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-size: 1050px 23px;
+    background-repeat: no-repeat;
+
     &__wrapper {
       width: 1050px;
       position: relative;
