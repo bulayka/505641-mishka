@@ -1,9 +1,11 @@
 .products {
   font-size: @main-font-size;
   line-height: 24px;
+
   &__wrapper {
     .wrapper();
   }
+
   &__title {
     width: 320px;
     margin: 0 auto;
@@ -12,10 +14,12 @@
     background-image: url(../img/hero-mobile@1x.jpg);
     background-position: center 0;
     background-repeat: no-repeat;
+
     @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
       background-image: url(../img/hero-mobile@2x.jpg);
       background-size: 478px auto;
     }
+
     h2 {
       width: 260px;
       font-size: 27px;
@@ -26,53 +30,65 @@
       margin-bottom: 125px;
     }
   }
+
   &__list {
     display: flex;
     flex-direction: column;
+
     &-item {
       margin: 0;
       padding: 26px 30px;
+
       &--interior,
       &--toys {
         position: relative;
         cursor: pointer;
+
         svg {
           position: absolute;
           right: 30px;
           top: 20px;
         }
       }
+
       &--link {
         path {
           fill: #3bb09d;
         }
       }
+
       &:hover {
         background-color: @color-lightgreen-hover;
+
         .products__list-item--link {
           path {
             fill: #29a592;
           }
         }
       }
+
       &:active {
         opacity: 0.3;
       }
     }
     background-color: @color-lightgreen;
   }
+
   &__list-item--toys {
     svg {
       right: 20px;
       top: 25px;
     }
     background-color: @color-darkgreen;
+
     &:hover {
       background-color: @color-darkgreen-hover;
     }
+
     &:active{
     }
   }
+
   &__list-item--link {
     font-size: 19px;
     line-height: 24px;
@@ -80,11 +96,13 @@
     color: @white-color-text;
     text-decoration: none;
   }
+
   &__item {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+
     &-title {
       h2 {
       font-size: 25px;
@@ -93,6 +111,7 @@
       margin: 0;
       }
     }
+
     &-of-the-week {
       font-size: @main-font-size;
       line-height: 20px;
@@ -102,6 +121,7 @@
       color: @color-lightgreen;
     }
   }
+
   &__text,
   &__parametres {
     margin: 0;
@@ -109,26 +129,32 @@
     line-height: 24px;
     color: @color-text-brown;
   }
+
   &__text {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
   &__parametres {
     padding: 0;
     margin-bottom: 20px;
     list-style: none;
+
     &-item {
       padding: 8px 0;
       border-bottom: 1px solid #ececec;
+
       span {
         display: inline-block;
         width: 90px;
       }
     }
   }
+
   &__product-image {
     margin-bottom: 130px;
   }
+
   &__buy {
     position: absolute;
     bottom: 5px;
@@ -136,23 +162,28 @@
     flex-direction: column;
     justify-content: center;
   }
+
   &__price {
     text-align: center;
     color: @color-text-brown;
     font-weight: 700;
     margin-bottom: 25px;
   }
+
   .products-btn {
     padding: 15px 80px;
   }
+
   @media (min-width: @tablet-width) {
     &__wrapper {
       width: 668px;
       padding: 0 50px;
     }
+
     &__title {
       width: 668px;
       background-size: cover;
+
       h2 {
         width: 500px;
         font-size: 43px;
@@ -162,17 +193,21 @@
         margin-bottom: 345px;
       }
     }
+
     &__list {
       flex-direction: row;
+
       &-item {
         flex-grow: 1;
         padding: 30px;
+
         &--link {
           font-size: 20px;
           line-height: 30px;
         }
       }
     }
+
     &__item {
       display: flex;
       flex-direction: row;
@@ -180,50 +215,61 @@
       align-items: flex-start;
       flex-wrap: wrap;
       margin-top: 150px;
+
       &-description {
         width: 290px;
       }
+
       &-title {
         position: absolute;
         top: -100px;
         display: flex;
         width: 668px;
         justify-content: space-between;
+
         h2 {
           font-size: 43px;
           line-height: 50px;
         }
       }
+
       &-of-the-week {
         width: 80px;
         line-height: 17px;
         text-align: center;
       }
     }
+
     &__text {
       margin-top: -7px;
       margin-bottom: 45px;
     }
+
     &__parametres {
       margin-bottom: 68px;
     }
+
     &__product-image{
       width: 50%;
       margin-bottom: 0;
     }
+
     .products-button {
       padding-left: 90px;
       padding-right: 90px;
     }
   }
+
   @media (min-width: @desktop-width) {
     &__wrapper {
       width: 1050px;
     }
+
     &__title {
       position: inherit;
       width: 1050px;
       background-size: cover;
+
       h2 {
         width: 620px;
         font-size: 53px;
@@ -233,28 +279,34 @@
         margin-bottom: 355px;
       }
     }
+
     &__item {
       &-title {
         top: 50px;
         width: 650px;
+
         h2 {
           font-size: 53px;
           line-height: 57px;
         }
       }
+
       &-of-the-week {
         position: absolute;
         top: 10px;
         left: -130px;
       }
+
       &-description {
         margin-top: 185px;
         margin-left: 175px;
       }
     }
+
     &__text {
       margin-bottom: 55px;
     }
+
     &__parametres {
       margin-bottom: 105px;
     }

@@ -2,28 +2,34 @@
   font-size: @main-font-size;
   line-height: 24px;
   font-weight: bold;
+
   &__wrapper {
     .wrapper();
   }
+
   &__logo {
     position: relative;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+
     &:hover {
       opacity: 0.6;
     }
+
     &:active {
       opacity: 0.3;
     }
   }
+
   .main-nav {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
+
     &__toggle {
       position: absolute;
       top: 30px;
@@ -35,11 +41,13 @@
       background-color: #ffffff;
       cursor: pointer;
       border: none;
+
       &:focus {
         border: none;
         outline: none;
       }
     }
+
     &--closed {
       .main-nav__toggle::before {
         content: "";
@@ -52,6 +60,7 @@
         box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
       }
     }
+
     &--opened {
       .main-nav__toggle {
         &::before,
@@ -64,48 +73,60 @@
           height: 2px;
           background-color: #000000;
         }
+
         &::before {
           transform: rotate(45deg);
         }
+
         &::after {
           transform: rotate(-45deg);
         }
       }
     }
+
     &__list {
       margin: 0;
       padding: 0;
       list-style: none;
     }
+
     &__item {
       border-top: 1px solid #ececec;
       padding: 25px 0 25px 45px;
+
       a {
       text-decoration: none;
       color: @main-color-text;
       }
+
       &--sub-menu {
         display: none;
       }
+
       &--cart,
       &--search {
         position: relative;
       }
     }
+
     &__link {
       &:hover {
         color: rgba(0, 0, 0, 0.6);
+
         svg {
           fill: @color-lightgreen;
         }
       }
+
       &:active {
         color: rgba(0, 0, 0, 0.3);
+
         svg {
           fill: rgba(99, 209, 187, 0.3);
         }
       }
     }
+
     .icon {
       position: absolute;
       left: 2px;
@@ -113,51 +134,64 @@
       fill: rgba(0, 0, 0, 0.2);
     }
   }
+
   &__delivery {
     display: none;
   }
+
   @media (max-width: @mobile-width-only) {
     .main-nav--closed .main-nav__list {
       display: none;
     }
+
     .main-nav--nojs .main-nav__toggle {
       display: none;
     }
   }
+
   @media (min-width: @tablet-width) {
     margin-bottom: -75px;
+
     &__wrapper {
       width: 668px;
       position: relative;
     }
+
     &__logo {
       width: 320px;
       text-align: left;
     }
+
     .hidden_search {
       font-size: 0;
     }
+
     .main-nav {
       flex-direction: row;
+
       &__list {
         display: flex;
         justify-content: flex-start;
         order: 2;
+
         &--dashboard {
           order: 1;
         }
       }
+
       &__item {
         font-size: 15px;
         border: none;
         padding-left: 0;
         width: 167px;
+
         &--cart {
           font-size: @main-font-size;
           width: 182px;
           padding-left: 45px;
           margin-left: 30px;
         }
+
         &--search {
           width: 35px;
           padding-left: 45px;
@@ -165,13 +199,16 @@
           border-right: 1px solid #ececec;
         }
       }
+
       &__toggle {
         display: none;
       }
+
       &__icon-search {
         padding-left: 30px;
       }
     }
+
     &__delivery {
       display: block;
       position: absolute;
@@ -182,53 +219,64 @@
       font-weight: 400;
     }
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: -85px;
+
     &__wrapper {
       width: 1050px;
     }
+
     &__logo {
       width: 250px;
       margin-top: 10px;
       margin-bottom: 0;
       z-index: 100;
     }
+
     .main-nav {
       justify-content: space-between;
       align-items: flex-start;
+
       &__item--sub-menu {
         display: block;
       }
+
       &__list {
         width: 450px;
         flex-wrap: wrap;
         order: -1;
+
         &--dashboard {
           width: 350px;
           order: 1;
         }
       }
+
       &__item {
         font-size: @main-font-size;
         padding-top: 35px;
         padding-bottom: 30px;
+
         &--sub-menu {
           width: 184px;
         }
+
         &--catalog {
           width: 184px;
           border-right: 1px solid #ececec;
         }
+
         &--on-order,
         &--sale {
           margin-left: 30px;
         }
       }
+
       .icon {
         position: absolute;
         left: 2px;
         top: 38px;
-
       }
     }
   }
