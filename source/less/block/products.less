@@ -1,7 +1,7 @@
 .products {
   font-size: @main-font-size;
   line-height: 24px;
-  background-image: url(../img/bg-zigzag-line.svg);
+  background-image: url("../img/bg-zigzag-line.svg");
   background-position: bottom;
   background-size: auto 6px;
   background-repeat: repeat-x;
@@ -16,12 +16,12 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-image: url(../img/hero-mobile@1x.jpg);
+    background-image: url("../img/hero-mobile@1x.jpg");
     background-position: center 0;
     background-repeat: no-repeat;
 
-    @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
-      background-image: url(../img/hero-mobile@2x.jpg);
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
       background-size: 478px auto;
     }
 
@@ -57,6 +57,12 @@
       }
 
       &--link {
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 700;
+        color: @white-color-text;
+        text-decoration: none;
+
         path {
           fill: #3bb09d;
         }
@@ -90,16 +96,8 @@
       background-color: @color-darkgreen-hover;
     }
 
-    &:active{
+    &:active {
     }
-  }
-
-  &__list-item--link {
-    font-size: 19px;
-    line-height: 24px;
-    font-weight: 700;
-    color: @white-color-text;
-    text-decoration: none;
   }
 
   &__item {
@@ -110,10 +108,10 @@
 
     &-title {
       h2 {
-      font-size: 25px;
-      line-height: 30px;
-      font-weight: 700;
-      margin: 0;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+        margin: 0;
       }
     }
 
@@ -209,7 +207,7 @@
         left: 0;
         width: 100%;
         height: 15px;
-        background-image: url(../img/bg-zigzag-fill.svg);
+        background-image: url("../img/bg-zigzag-fill.svg");
         background-position: auto 15px;
         background-repeat: no-repeat;
       }
@@ -270,7 +268,7 @@
       margin-bottom: 68px;
     }
 
-    &__product-image{
+    &__product-image {
       width: 50%;
       margin-bottom: 0;
     }
@@ -302,11 +300,13 @@
         margin-top: 150px;
         margin-bottom: 355px;
       }
+
       &::after {
         height: 23px;
         background-position: auto 23px;
       }
     }
+
     &__item {
       margin-top: 70px;
 
