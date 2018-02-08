@@ -2,6 +2,7 @@
   &__wrapper {
     .wrapper();
   }
+
   &__description {
     width: 260px;
     font-size: 13px;
@@ -11,12 +12,14 @@
     padding-top: 25px;
     margin: 0;
   }
+
   &__fieldset {
     display: flex;
     border: none;
     padding: 0;
     padding-top: 25px;
     margin: 0;
+
     &-title {
       position: relative;
       display: block;
@@ -25,6 +28,7 @@
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 25px;
+
       &::before {
         position: absolute;
         right: 0;
@@ -36,6 +40,7 @@
       }
     }
   }
+
   &__list {
     width: 100%;
     display: flex;
@@ -43,10 +48,12 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
     label {
       padding-top: 11px;
       padding-bottom: 11px;
     }
+
     input[type=text] {
       font-size: @main-font-size;
       line-height: 18px;
@@ -55,22 +62,27 @@
       border-bottom: 2px solid black;
       padding-bottom: 15px;
       padding-top: 15px;
+
       &:hover {
         border-bottom: 2px solid @color-lightgreen;
       }
+
       &:focus {
         outline: none;
         border-bottom: 2px solid @color-lightgreen;
       }
     }
+
     &-phone {
       margin-bottom: 25px;
     }
   }
+
   &__checkbox,
   &__radiobutton {
     position: relative;
     padding-left: 60px;
+
     input[type="checkbox"] + .checkbox-indicator,
     input[type="radio"] + .radiobutton-indicator {
       position: absolute;
@@ -79,13 +91,16 @@
       width: 36px;
       height: 35px;
       border: 2px solid #444444;
+
       &:hover {
         border: 2px solid @color-lightgreen;
       }
+
       &:active {
         border: 2px solid rgba(68, 68, 68, 0.3);
       }
     }
+
     input[type="checkbox"]:checked + .checkbox-indicator::before,
     input[type="checkbox"]:checked + .checkbox-indicator::after {
       content: "";
@@ -99,11 +114,13 @@
       background-position: 0 0;
     }
   }
+
   &__radiobutton {
     input[type="radio"] + .radiobutton-indicator {
       top: 10px;
       border-radius: 50%;
     }
+
     input[type="radio"]:checked + .radiobutton-indicator::before,
     input[type="radio"]:checked + .radiobutton-indicator::after {
       content: "";
@@ -118,6 +135,7 @@
       background-position: 0 0;
     }
   }
+
   &__list-item {
     display: flex;
     flex-direction: column;
@@ -127,24 +145,29 @@
     font-weight: 700;
     vertical-align: middle;
     margin-bottom: 10px;
+
     &--type {
       width: 190px;
     }
+
     &--fio,
     &--contacts,
     &--addition {
       position: relative;
       padding-left: 0;
     }
+
     &--addition {
       textarea {
         font-size: 17px;
         border: none;
         padding: 20px;
         border: 2px solid black;
+
         &:hover {
           border: 2px solid @color-lightgreen;
         }
+
         &:focus {
           outline: none;
           border: 2px solid @color-lightgreen;
@@ -152,25 +175,31 @@
       }
     }
   }
+
   &__fieldset-mail {
     padding-top: 25px;
   }
+
   &__phone-icon,
   &__mail-icon {
     position: absolute;
     bottom: 15px;
     right: 0;
+
     path {
       fill: rgba(0, 0, 0, 0.3);
     }
+
     &:hover {
       path {
         fill: @color-lightgreen;
       }
     }
   }
+
   &__require {
     padding-bottom: 55px;
+
     &-text {
       font-size: 14px;
       line-height: 16px;
@@ -181,94 +210,118 @@
       padding-top: 15px;
     }
   }
+
   &__btn {
     font-size: @main-font-size;
     line-height: 16px;
     background: none;
     padding: 16px 45px;
   }
+
   @media (min-width: @tablet-width) {
     &__checkbox,
     &__radiobutton {
       padding-left: 65px;
     }
+
     &__radiobutton {
       input[type="radio"] + .radiobutton-indicator {
         top: 0;
       }
     }
+
     &__description {
       width: 620px;
       font-size: @main-font-size;
       line-height: 30px;
     }
+
     &__list-color {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     &__fieldset {
       padding: 50px 0;
+
       &-wrapper {
         display: flex;
         align-items: baseline;
+
         &--client-contacts,
         &--addition {
           flex-direction: column;
         }
       }
+
       &-title {
         width: 170px;
+
         &::before {
           display: none;
         }
       }
+
       &--type {
         padding-bottom: 25px;
       }
+
       &--tel,
       &--mail {
         display: flex;
         align-items: baseline;
       }
+
       &--color,
       &--client-contacts {
         background: #f1f1f1;
       }
     }
+
     &__list-item--fio,
     &__list-item--contacts {
       display: flex;
       flex-direction: row;
       align-items: baseline;
+
       label {
         margin-right: 20px;;
       }
+
       input {
         flex-grow: 1;
         padding-left: 20px;
       }
     }
+
     &__list-item--contacts {
+
       input {
         background: #f1f1f1;
       }
     }
+
     &__list {
       width: 500px;
+
       &-item {
         margin-bottom: 25px;
+
         &--type {
           width: 334px;
         }
+
         &--color {
           width: 188px;
         }
       }
     }
+
     &__addition {
       display: flex;
     }
+
     &__require {
       width: 100%;
       display: flex;
@@ -278,25 +331,30 @@
       padding-top: 40px;
       padding-bottom: 0;
     }
+
     &__btn {
       padding: 16px 30px;
     }
   }
+
   @media (min-width: @desktop-width) {
     &__description {
       width: 680px;
       padding: 125px 0;
       margin-left: 175px;
     }
+
     &__list {
       width: 700px;
     }
+
     &__list-color {
       width: 750px;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     &__require {
       width: 700px;
       margin-left: 170px;

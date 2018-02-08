@@ -2,9 +2,11 @@
   display: flex;
   justify-content: center;
   width: 100%;
+
   &__wrapper {
     .wrapper();
   }
+
   &__item {
     position: relative;
     padding-top: 90px;
@@ -12,16 +14,20 @@
     flex-direction: column;
     border: 1px solid #ececec;
     margin-bottom: 55px;
+
     &:hover {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     }
+
     &:active {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     }
   }
+
   &__video {
     position: relative;
     margin-bottom: 30px;
+
     &::before {
       content: "";
       position: absolute;
@@ -35,14 +41,17 @@
       margin-top: -38px;
       cursor: pointer;
     }
+
     &:hover::before {
         transform: scale(1.2);
     }
+
     &:active::before {
       opacity: 0.6;
       transform: scale(0.8);
     }
   }
+
   &__title {
     position: absolute;
     top: 0;
@@ -50,9 +59,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     path {
       fill: @color-lightgreen;
     }
+
     h2 {
     width: 135px;
     font-size: @main-font-size;
@@ -61,6 +72,7 @@
     margin-left: 25px;
     }
   }
+
   &__text {
     width: 185px;
     font-size: 13px;
@@ -70,6 +82,7 @@
     margin-bottom: 30px;
     margin-left: 34px;
   }
+
   &--btn {
     display: inline-flex;
     font-size: @main-font-size;
@@ -78,24 +91,29 @@
     margin-left: 34px;
     margin-bottom: 30px;
 }
+
   @media (min-width: @tablet-width) {
     &__item {
       padding-top: 0;
     }
+
     &__video {
       margin-bottom: 40px;
     }
+
     &__title {
       position: inherit;
       justify-content: flex-start;
       margin-left: 42px;
       margin-bottom: 40px;
+
       h2 {
       width: 245px;
       font-size: 20px;
       line-height: 24px;
       }
     }
+
     &__text {
       width: 582px;
       font-size: 15px;
@@ -103,10 +121,12 @@
       color: @color-text-brown;
       margin-bottom: 40px;
     }
+
     &--btn {
       padding: 13px 220px;
     }
   }
+
   @media (min-width: @desktop-width) {
     &__item {
       height: 455px;
@@ -114,29 +134,35 @@
       flex-direction: row;
       flex-wrap: wrap;
     }
+
     &__video {
       width: 682px;
     }
+
     &__text {
       width: 226px;
       margin-left: 0;
       margin-bottom: 50px;
     }
+
     &__title {
       margin-left: 0;
       margin-top: 50px;
       flex-direction: column;
       align-items: flex-start;
+
       h2 {
         width: 150px;
         margin-left: 0;
       }
     }
+
     &__description {
       margin-left: 80px;
       display: flex;
       flex-direction: column;
     }
+
     &--btn {
       width: 140px;
       padding: 13px 42px;
