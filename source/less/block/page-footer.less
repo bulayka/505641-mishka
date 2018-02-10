@@ -64,6 +64,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
 
     .copyright__text {
       margin-right: 30px;
@@ -89,11 +91,15 @@
   @media (min-width: @tablet-width) {
     &__wrapper {
       width: 668px;
-      padding: 0 50px;
+      padding: 25px 50px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__copyright {
+      padding-bottom: 0;
     }
 
     &__logo {
@@ -103,7 +109,11 @@
 
     .social {
       &__list {
+        width: 140px;
         border: none;
+        margin-right: 20px;
+        margin-top: 33px;
+        margin-bottom: 10px;
       }
     }
 

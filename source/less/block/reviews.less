@@ -21,7 +21,7 @@
   &__title {
     font-size: 25px;
     color: #000000;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -51,7 +51,7 @@
   }
 
   &__btn {
-    padding: 15px 80px;
+    padding: 14px 80px;
   }
 
   &__slider-controls {
@@ -81,8 +81,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     background-size: auto 15px;
+    margin-top: 30px;
 
     &__wrapper {
       width: 668px;
@@ -101,23 +102,28 @@
       font-size: 43px;
       line-height: 50px;
       margin-bottom: 50px;
+      margin-top: 75px;
     }
 
     &__review-text {
       width: 645px;
       font-size: @main-font-size;
-      margin-bottom: 60px;
+      margin-bottom: 55px;
     }
 
     &__author {
-      width: 240px;
+      width: 255px;
+
+      &-name {
+        font-size: 18px;
+      }
     }
 
     &__slider-controls {
       position: absolute;
       width: 170px;
-      bottom: 0;
-      right: 20px;
+      bottom: -6px;
+      right: 15px;
     }
 
     &__prev,
@@ -127,9 +133,9 @@
 
     &__btn {
       position: absolute;
-      padding: 15px 40px;
-      top: 40px;
-      right: 0;
+      padding: 14px 35px;
+      top: 78px;
+      right: 1px;
     }
   }
 
