@@ -165,7 +165,7 @@
 
         <fieldset class="order-form__fieldset order-form__fieldset--client-contacts">
           <div class="order-form__wrapper order-form__fieldset-wrapper order-form__fieldset-wrapper--client-contacts">
-            <div class="order-form__fieldset--tel">
+            <div class="order-form__fieldset-tel">
               <span class="order-form__fieldset-title">ТЕЛ</span>
               <ul class="order-form__list order-form__list-phone">
                 <li class="order-form__list-item order-form__list-item--contacts">
@@ -185,7 +185,7 @@
                 </li>
             </ul>
             </div>
-            <div class="order-form__fieldset--mail">
+            <div class="order-form__fieldset-mail">
               <span class="order-form__fieldset-title">E-MAIL</span>
               <ul class="order-form__list order-form__list-mail">
                 <li class="order-form__list-item order-form__list-item--contacts">
@@ -283,19 +283,7 @@
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-      navMain.classList.remove('main-nav--nojs');
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu-toggle.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>
