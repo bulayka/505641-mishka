@@ -109,7 +109,7 @@
             </ul>
             <div class="products__buy">
               <span class="products__price">Цена: 900 руб.</span>
-              <a class="btn products__btn" href="#">Заказать</a>
+              <a class="btn products__btn modal-open">Заказать</a>
             </div>
           </div>
           <div class="products__product-image">
@@ -124,6 +124,7 @@
           </div>
         </article>
       </section>
+
       <section class="advantages">
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Коротко о нас:</h2>
@@ -236,6 +237,7 @@
         <a class="btn contacts__btn contacts__wrapper" href="#">Напишите нам</a>
       </section>
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
@@ -304,6 +306,23 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <span class="modal__text">Выберите размер:</span>
+        <div class="modal__size">
+          <ul class="modal__list">
+            <li class="modal__list-item modal__list-item--current">S</li>
+            <li class="modal__list-item">M</li>
+            <li class="modal__list-item">L</li>
+          </ul>
+        </div>
+        <a class="btn modal__btn modal-close">Добавить</a>
+      </div>
+    </section>
+
+    <script src="js/modal.js"></script>
     <script src="js/menu-toggle.js"></script>
     <script src="js/picturefill.js"></script>
   </body>

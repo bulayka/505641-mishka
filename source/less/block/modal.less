@@ -1,0 +1,125 @@
+.modal {
+  display: none;
+
+  &-show {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -200px;
+    z-index: 100;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    .wrapper();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &__list {
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    list-style: none;
+
+    &-item {
+      font-size: @main-font-size;
+      line-height: 16px;
+      font-weight: 600;
+      color: @color-text-brown;
+      padding: 15px 30px;
+      border: 2px solid #ececec;
+
+      &:hover {
+        border: 2px solid #c7c7c7;
+      }
+
+      &:active {
+        border: 2px solid #62d1ba;
+      }
+
+      &--current {
+        border: 2px solid @color-lightgreen;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 30px;
+    color: @color-text-brown;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    width: 256px;
+    padding: 14px 0;
+    margin-bottom: 45px;
+    color: #ffffff;
+    background-color: @color-lightgreen;
+    border: none;
+
+    &:hover {
+      background-color: @color-lightgreen;
+    }
+
+    &:active {
+      color: #ffffff;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &-show {
+      margin-left: -282px;
+    }
+
+    &__wrapper {
+      width: 565px;
+      padding: 0;
+    }
+
+    &__title {
+      width: 355px;
+      font-size: 30px;
+      line-height: 57px;
+    }
+
+    &__text {
+      font-size: @main-font-size;
+    }
+
+    &__list {
+      width: 350px;
+
+      &-item {
+        padding: 16px 48px;
+      }
+    }
+
+    &__btn {
+      width: 350px;
+    }
+  }
+}
