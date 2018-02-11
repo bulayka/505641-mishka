@@ -12,6 +12,7 @@
     font-size: 25px;
     line-height: 30px;
     font-weight: 700;
+    margin: 0;
     margin-bottom: 25px;
   }
 
@@ -27,8 +28,8 @@
   &__item {
     position: relative;
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 57px;
+    padding-bottom: 26px;
 
     svg {
       position: absolute;
@@ -66,6 +67,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 50px;
+
     &__wrapper {
       width: 668px;
       padding: 0 50px;
@@ -76,18 +79,34 @@
     &__title {
       font-size: 43px;
       line-height: 50px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     &__list {
       width: 668px;
-      height: 450px;
+      height: 460px;
       flex-wrap: wrap;
     }
 
     &__item {
       width: 50%;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
+
+      &--style {
+        width: 240px;
+      }
+
+      &--likes {
+        width: 220px;
+      }
+
+      &--love {
+        width: 250px;
+      }
+
+      &--packaging {
+        width: 235px;
+      }
     }
   }
 
