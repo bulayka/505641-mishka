@@ -15,13 +15,13 @@
     display: none;
 
     &:hover {
-      path {
+      svg {
         fill: @color-darkgreen;
       }
     }
 
     &:active {
-      path {
+      svg {
         fill: @color-darkgreen;
         opacity: 0.3;
       }
@@ -34,8 +34,7 @@
       margin: 0 auto;
       margin-top: 25px;
       margin-bottom: 15px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 10px;
       list-style: none;
       width: 150px;
       display: flex;
@@ -46,13 +45,13 @@
 
     &__link {
       &:hover {
-        path {
+        svg {
           fill: @color-darkgreen;
         }
       }
 
       &:active {
-        path {
+        svg {
           fill: @color-darkgreen;
           opacity: 0.3;
         }
@@ -64,7 +63,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
     padding-bottom: 20px;
 
     .copyright__text {
@@ -73,12 +73,12 @@
   }
 
   .copyright {
-    path {
+    svg {
       fill: @color-lightgreen;
     }
 
     &:hover {
-      path {
+      svg {
         fill: @color-darkgreen;
       }
     }
@@ -100,6 +100,8 @@
 
     &__copyright {
       padding-bottom: 0;
+      padding-top: 10px;
+        border: none;
     }
 
     &__logo {
@@ -110,7 +112,6 @@
     .social {
       &__list {
         width: 140px;
-        border: none;
         margin-right: 20px;
         margin-top: 33px;
         margin-bottom: 10px;
@@ -120,6 +121,7 @@
     @media (min-width: @desktop-width) {
       &__wrapper {
         width: 1050px;
+        padding-top: 20px;
       }
     }
   }
