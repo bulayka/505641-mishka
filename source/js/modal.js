@@ -1,17 +1,20 @@
-var link = document.querySelector(".modal-open");
+var link = document.querySelectorAll(".modal-open"), i;
 var popup = document.querySelector(".modal");
-var close = document.querySelector(".modal-close");
-var bodyr = document.querySelector("body");
+var opacity = document.querySelector(".body-opacity");
 
+for (i = 0; i < link.length; ++i) {
+	link[i].addEventListener("click", function (event) {
+		event.preventDefault(event);
+		popup.classList.add("modal-show");
+    opacity.classList.add("body-opacity1");
+	})
+}
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-  bodyr.classList.add("body-opacity");
-});
-
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
-  bodyr.classList.remove("body-opacity");
+window.addEventListener("keydown", function (event) {
+    if (event.keyCode == 27) {
+        if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            opacity.classList.remove("body-opacity1");
+        }
+    }
 });

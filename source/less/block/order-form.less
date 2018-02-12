@@ -9,7 +9,7 @@
     line-height: 24px;
     color: @color-text-brown;
     padding: 0;
-    padding-top: 25px;
+    padding-top: 22px;
     margin: 0;
   }
 
@@ -17,7 +17,7 @@
     display: flex;
     border: none;
     padding: 0;
-    padding-top: 25px;
+    padding-top: 20px;
     margin: 0;
 
     &-title {
@@ -27,7 +27,7 @@
       font-size: @main-font-size;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
 
       &::before {
         position: absolute;
@@ -38,6 +38,26 @@
         height: 1px;
         background-color: @color-lightgreen;
       }
+    }
+
+    &--color {
+      padding-top: 32px;
+    }
+
+    &--client-fio {
+      padding-top: 2px;
+    }
+
+    &--client-contacts {
+      padding-top: 7px;
+
+      span {
+        margin-bottom: 5px;
+      }
+    }
+
+    &--addition {
+      padding-top: 7px;
     }
   }
 
@@ -74,7 +94,7 @@
     }
 
     &-phone {
-      margin-bottom: 25px;
+      margin-bottom: 8px;
     }
   }
 
@@ -117,7 +137,7 @@
 
   &__radiobutton {
     input[type="radio"] + .radiobutton-indicator {
-      top: 10px;
+      top: 5px;
       border-radius: 50%;
     }
 
@@ -144,10 +164,19 @@
     line-height: 18px;
     font-weight: 700;
     vertical-align: middle;
-    margin-bottom: 10px;
+    margin-bottom: 22px;
 
     &--type {
-      width: 190px;
+      width: 220px;
+      margin-bottom: 0;
+    }
+
+    &--fio {
+      margin-bottom: 20px;
+      label {
+        padding: 0;
+        padding-top: 5px;
+      }
     }
 
     &--fio,
@@ -158,9 +187,11 @@
     }
 
     &--addition {
+      margin-bottom: 10px;
+
       textarea {
         font-size: 17px;
-        padding: 20px;
+        padding: 15px;
         border: 2px solid black;
 
         &:hover {
@@ -180,15 +211,10 @@
     position: absolute;
     bottom: 15px;
     right: 0;
-
-    path {
-      fill: rgba(0, 0, 0, 0.3);
-    }
+    fill: rgba(0, 0, 0, 0.3);
 
     &:hover {
-      path {
-        fill: @color-lightgreen;
-      }
+      fill: @color-lightgreen;
     }
   }
 
@@ -216,6 +242,39 @@
   @media (min-width: @tablet-width) {
     &__checkbox,
     &__radiobutton {
+      input[type="checkbox"] + .checkbox-indicator,
+      input[type="radio"] + .radiobutton-indicator {
+        top: -3px;
+        width: 48px;
+        height: 48px;
+      }
+
+      input[type="checkbox"]:checked + .checkbox-indicator::before,
+      input[type="checkbox"]:checked + .checkbox-indicator::after {
+        top: 10px;
+        left: 8px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &__radiobutton {
+      input[type="radio"] + .radiobutton-indicator {
+        top: 5px;
+        border-radius: 50%;
+      }
+
+      input[type="radio"]:checked + .radiobutton-indicator::before,
+      input[type="radio"]:checked + .radiobutton-indicator::after {
+        top: 14px;
+        left: 14px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__checkbox,
+    &__radiobutton {
       padding-left: 65px;
     }
 
@@ -229,6 +288,7 @@
       width: 620px;
       font-size: @main-font-size;
       line-height: 30px;
+      padding-top: 62px;
     }
 
     &__list-color {
@@ -238,7 +298,7 @@
     }
 
     &__fieldset {
-      padding: 50px 0;
+      padding: 60px 0;
 
       &-wrapper {
         display: flex;
@@ -271,6 +331,20 @@
       &--color,
       &--client-contacts {
         background: #f1f1f1;
+        padding-bottom: 20px;
+      }
+
+      &--client-contacts {
+        padding-top: 55px;
+      }
+
+      &--client-fio {
+        padding-bottom: 25px;
+      }
+
+      &--addition {
+        padding-top: 55px;
+        padding-bottom: 35px;
       }
     }
 
@@ -299,21 +373,39 @@
     &__list {
       width: 500px;
 
+      &-phone {
+        margin: 0;
+      }
+
+      &-color {
+        width: 450px;
+      }
+
       &-item {
+        font-size: 19px;
         margin-bottom: 25px;
 
         &--type {
           width: 334px;
+          margin-bottom: 35px;
         }
 
         &--color {
           width: 188px;
+          margin-bottom: 32px;
         }
       }
     }
 
+    &__phone-icon,
+    &__mail-icon {
+      bottom: 14px;
+      right: 28px;
+    }
+
     &__addition {
       display: flex;
+      align-items: baseline;
     }
 
     &__require {
@@ -324,6 +416,10 @@
       align-items: baseline;
       padding-top: 40px;
       padding-bottom: 0;
+
+      &-text {
+        font-size: @main-font-size;
+      }
     }
 
     &__btn {
@@ -334,8 +430,15 @@
   @media (min-width: @desktop-width) {
     &__description {
       width: 680px;
-      padding: 125px 0;
+      padding: 0;
+      padding-top: 100px;
       margin-left: 175px;
+    }
+
+    &__fieldset {
+      &-title {
+        text-align: center;
+      }
     }
 
     &__list {
@@ -352,6 +455,11 @@
     &__require {
       width: 700px;
       margin-left: 170px;
+    }
+
+    &__phone-icon,
+    &__mail-icon {
+      right: 0;
     }
   }
 }

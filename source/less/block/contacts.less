@@ -86,6 +86,10 @@
     }
   }
 
+  &__interactive {
+    position: absolute;
+  }
+
   &__btn {
     width: 256px;
     padding: 15px 0;
@@ -148,14 +152,18 @@
     &__map {
       width: 768px;
       margin-bottom: 45px;
+
+      iframe {
+        width: 768px;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 95px;
     width: 1050px;
     padding: 0 50px;
     display: flex;
@@ -177,13 +185,16 @@
       position: relative;
 
       h2 {
-        font-size: 50px;
+        font-size: 53px;
         line-height: 57px;
+        margin: 0;
+        margin-top: 70px;
       }
     }
 
     &__text {
-      width: 270px;
+      width: 350px;
+      padding-top: 47px;
     }
 
     &__adress {
@@ -196,8 +207,8 @@
 
     &__flag {
       position: absolute;
-      top: 30px;
-      left: -115px;
+      top: 60px;
+      left: -110px;
     }
 
     &__btn {
@@ -213,6 +224,10 @@
     &__map {
       width: 525px;
       margin: 0;
+
+      iframe {
+        width: 525px;
+      }
     }
   }
 }
