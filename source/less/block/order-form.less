@@ -173,6 +173,7 @@
 
     &--fio {
       margin-bottom: 20px;
+
       label {
         padding: 0;
         padding-top: 5px;
@@ -242,6 +243,7 @@
   @media (min-width: @tablet-width) {
     &__checkbox,
     &__radiobutton {
+      padding-left: 65px;
       input[type="checkbox"] + .checkbox-indicator,
       input[type="radio"] + .radiobutton-indicator {
         top: -3px;
@@ -260,7 +262,7 @@
 
     &__radiobutton {
       input[type="radio"] + .radiobutton-indicator {
-        top: 5px;
+        top: 0px;
         border-radius: 50%;
       }
 
@@ -273,28 +275,11 @@
       }
     }
 
-    &__checkbox,
-    &__radiobutton {
-      padding-left: 65px;
-    }
-
-    &__radiobutton {
-      input[type="radio"] + .radiobutton-indicator {
-        top: 0;
-      }
-    }
-
     &__description {
       width: 620px;
       font-size: @main-font-size;
       line-height: 30px;
       padding-top: 62px;
-    }
-
-    &__list-color {
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
     }
 
     &__fieldset {
@@ -379,6 +364,9 @@
 
       &-color {
         width: 450px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
 
       &-item {
