@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Mishka-catalog</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="body-opacity">
@@ -69,8 +72,10 @@
       <main class="main-page">
         <h1 class="main-page__title">Каталог товаров</h1>
           <section class="catalog">
+            <h2 class="visually-hidden">Наши работы</h2>
             <div class="catalog__wrapper">
               <article class="catalog__item">
+                <h2 class="visually-hidden">Зайчик-попрыгайчик</h2>
                 <a class="catalog__item-link" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
@@ -95,6 +100,7 @@
                 </div>
               </article>
               <article class="catalog__item">
+                <h2 class="visually-hidden">Корзина для белья</h2>
                 <a class="catalog__item-link" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
@@ -119,6 +125,7 @@
                 </div>
               </article>
               <article class="catalog__item">
+                <h2 class="visually-hidden">Большая корзина для игрушек</h2>
                 <a class="catalog__item-link" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">

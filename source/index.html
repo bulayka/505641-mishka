@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Mishka</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="body-opacity">
@@ -72,20 +75,18 @@
           <div class="products__title">
             <h2>Милые штуки ручной работы для дома</h2>
             <div class="products__list">
-              <p class="products__list-item products__list-item--interior">
-                <a class="products__list-item-link" href="#">Предметы <br> интерьера
-                  <svg class="icon-interior" width="40" height="62">
-                    <use xlink:href="img/sprite.svg#icon-interior"></use>
-                  </svg>
-                </a>
-              </p>
-              <p class="products__list-item products__list-item--toys">
-                <a class="products__list-item-link" href="#">Детские <br> игрушки
-                  <svg class="icon-toy" width="60" height="60">
-                    <use xlink:href="img/sprite.svg#icon-toy"></use>
-                  </svg>
-                </a>
-              </p>
+              <a class="products__list-item products__list-item--interior products__list-item--link" href="#">
+                Предметы <br> интерьера
+                <svg class="icon-interior" width="40" height="62">
+                  <use xlink:href="img/sprite.svg#icon-interior"></use>
+                </svg>
+              </a>
+              <a class="products__list-item products__list-item--toys products__list-item--link" href="#">
+                Детские <br> игрушки
+                <svg class="icon-toy" width="60" height="60">
+                  <use xlink:href="img/sprite.svg#icon-toy"></use>
+                </svg>
+              </a>
             </div>
           </div>
           <article class="products__item products__wrapper">
