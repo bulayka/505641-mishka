@@ -1,490 +1,488 @@
-.order-form {
-  &__wrapper {
-    .wrapper();
+.order-form__wrapper {
+  .wrapper();
+}
+
+.order-form__description {
+  width: 260px;
+  font-size: 13px;
+  line-height: 24px;
+  color: @color-text-brown;
+  padding: 0;
+  padding-top: 22px;
+  margin: 0;
+}
+
+.order-form__fieldset {
+  display: flex;
+  border: none;
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+
+  &-title {
+    position: relative;
+    display: block;
+    color: @color-lightgreen;
+    font-size: @main-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      content: "";
+      width: 200px;
+      height: 1px;
+      background-color: @color-lightgreen;
+    }
   }
 
-  &__description {
-    width: 260px;
-    font-size: 13px;
-    line-height: 24px;
-    color: @color-text-brown;
-    padding: 0;
-    padding-top: 22px;
-    margin: 0;
+  &--color {
+    padding-top: 32px;
   }
 
-  &__fieldset {
-    display: flex;
+  &--client-fio {
+    padding-top: 2px;
+  }
+
+  &--client-contacts {
+    padding-top: 7px;
+
+    span {
+      margin-bottom: 5px;
+    }
+  }
+
+  &--addition {
+    padding-top: 7px;
+  }
+}
+
+.order-form__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  label {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    font-size: @main-font-size;
+    line-height: 18px;
+    color: rgba(51, 51, 51, 0.3);
     border: none;
-    padding: 0;
-    padding-top: 20px;
-    margin: 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
 
-    &-title {
-      position: relative;
-      display: block;
-      color: @color-lightgreen;
-      font-size: @main-font-size;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-
-      &::before {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        content: "";
-        width: 200px;
-        height: 1px;
-        background-color: @color-lightgreen;
-      }
-    }
-
-    &--color {
-      padding-top: 32px;
-    }
-
-    &--client-fio {
-      padding-top: 2px;
-    }
-
-    &--client-contacts {
-      padding-top: 7px;
-
-      span {
-        margin-bottom: 5px;
-      }
-    }
-
-    &--addition {
-      padding-top: 7px;
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 2px solid @color-lightgreen;
     }
   }
 
-  &__list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  &-phone {
+    margin-bottom: 8px;
+  }
+}
+
+.order-form__checkbox,
+.order-form__radiobutton {
+  position: relative;
+  padding-left: 60px;
+
+  input[type="checkbox"] + .checkbox-indicator,
+  input[type="radio"] + .radiobutton-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 35px;
+    border: 2px solid #444444;
+
+    &:hover {
+      border: 2px solid @color-lightgreen;
+    }
+
+    &:active {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  input[type="checkbox"]:checked + .checkbox-indicator::before,
+  input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 36px;
+    height: 35px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.order-form__radiobutton {
+  input[type="radio"] + .radiobutton-indicator {
+    top: 5px;
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:checked + .radiobutton-indicator::before,
+  input[type="radio"]:checked + .radiobutton-indicator::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: @color-lightgreen;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.order-form__list-item {
+  display: flex;
+  flex-direction: column;
+  color: @main-color-text;
+  font-size: @main-font-size;
+  line-height: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-bottom: 22px;
+
+  &--type {
+    width: 220px;
+    margin-bottom: 0;
+  }
+
+  &--fio {
+    margin-bottom: 20px;
 
     label {
-      padding-top: 11px;
-      padding-bottom: 11px;
+      padding: 0;
+      padding-top: 5px;
     }
+  }
 
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"] {
-      font-size: @main-font-size;
-      line-height: 18px;
-      color: rgba(51, 51, 51, 0.3);
-      border: none;
-      border-bottom: 2px solid black;
-      padding-bottom: 15px;
-      padding-top: 15px;
+  &--fio,
+  &--contacts,
+  &--addition {
+    position: relative;
+    padding-left: 0;
+  }
+
+  &--addition {
+    margin-bottom: 10px;
+
+    textarea {
+      font-size: 17px;
+      padding: 15px;
+      border: 2px solid black;
 
       &:hover,
       &:active,
       &:focus {
-        border-bottom: 2px solid @color-lightgreen;
+        border: 2px solid @color-lightgreen;
       }
     }
-
-    &-phone {
-      margin-bottom: 8px;
-    }
   }
+}
 
-  &__checkbox,
-  &__radiobutton {
-    position: relative;
-    padding-left: 60px;
+.order-form__phone-icon,
+.order-form__mail-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  fill: rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    fill: @color-lightgreen;
+  }
+}
+
+.order-form__require {
+  padding-bottom: 55px;
+
+  &-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: @color-text-brown;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    padding-top: 15px;
+  }
+}
+
+.order-form__btn {
+  font-size: @main-font-size;
+  line-height: 16px;
+  background: none;
+  padding: 16px 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__checkbox,
+  .order-form__radiobutton {
+    padding-left: 80px;
 
     input[type="checkbox"] + .checkbox-indicator,
     input[type="radio"] + .radiobutton-indicator {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 36px;
-      height: 35px;
-      border: 2px solid #444444;
-
-      &:hover {
-        border: 2px solid @color-lightgreen;
-      }
-
-      &:active {
-        border: 2px solid rgba(68, 68, 68, 0.3);
-      }
+      top: -3px;
+      width: 48px;
+      height: 48px;
     }
 
     input[type="checkbox"]:checked + .checkbox-indicator::before,
     input[type="checkbox"]:checked + .checkbox-indicator::after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 3px;
-      width: 36px;
-      height: 35px;
-      background-image: url("../img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
+      top: 10px;
+      left: 8px;
+      width: 48px;
+      height: 48px;
     }
   }
 
-  &__radiobutton {
+  .order-form__radiobutton {
     input[type="radio"] + .radiobutton-indicator {
-      top: 5px;
+      top: -3px;
+      left: -3px;
       border-radius: 50%;
     }
 
     input[type="radio"]:checked + .radiobutton-indicator::before,
     input[type="radio"]:checked + .radiobutton-indicator::after {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 16px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: @color-lightgreen;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+      top: 14px;
+      left: 14px;
+      width: 20px;
+      height: 20px;
     }
   }
 
-  &__list-item {
-    display: flex;
-    flex-direction: column;
-    color: @main-color-text;
+  .order-form__description {
+    width: 620px;
     font-size: @main-font-size;
-    line-height: 18px;
-    font-weight: 700;
-    vertical-align: middle;
-    margin-bottom: 22px;
+    line-height: 30px;
+    padding-top: 62px;
+  }
+
+  .order-form__fieldset {
+    padding: 60px 0;
+
+    &-wrapper {
+      display: flex;
+      align-items: baseline;
+
+      &--client-contacts,
+      &--addition {
+        flex-direction: column;
+      }
+    }
+
+    &-title {
+      width: 170px;
+
+      &::before {
+        display: none;
+      }
+    }
 
     &--type {
-      width: 220px;
-      margin-bottom: 0;
+      padding-bottom: 25px;
     }
 
-    &--fio {
-      margin-bottom: 20px;
-
-      label {
-        padding: 0;
-        padding-top: 5px;
-      }
+    &-tel,
+    &-mail {
+      display: flex;
+      align-items: baseline;
     }
 
-    &--fio,
-    &--contacts,
+    &--color,
+    &--client-contacts {
+      background: #f1f1f1;
+      padding-bottom: 20px;
+      padding-top: 53px;
+    }
+
+    &--client-contacts {
+      padding-top: 52px;
+    }
+
+    &--client-fio {
+      padding-bottom: 25px;
+      padding-top: 52px;
+    }
+
     &--addition {
-      position: relative;
-      padding-left: 0;
-    }
-
-    &--addition {
-      margin-bottom: 10px;
-
-      textarea {
-        font-size: 17px;
-        padding: 15px;
-        border: 2px solid black;
-
-        &:hover,
-        &:active,
-        &:focus {
-          border: 2px solid @color-lightgreen;
-        }
-      }
+      padding-top: 55px;
+      padding-bottom: 35px;
     }
   }
 
-  &__phone-icon,
-  &__mail-icon {
-    position: absolute;
-    bottom: 15px;
-    right: 0;
-    fill: rgba(0, 0, 0, 0.3);
+  .order-form__list-item--fio,
+  .order-form__list-item--contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 
-    &:hover {
-      fill: @color-lightgreen;
+    label {
+      margin-right: 20px;
+    }
+
+    input {
+      flex-grow: 1;
+      padding-left: 20px;
     }
   }
 
-  &__require {
-    padding-bottom: 55px;
+  .order-form__list-item--contacts {
+    input {
+      background: #f1f1f1;
+    }
+  }
 
-    &-text {
-      font-size: 14px;
-      line-height: 16px;
-      color: @color-text-brown;
+  .order-form__list {
+    width: 500px;
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      font-size: 19px;
+    }
+
+    &-phone {
       margin: 0;
-      padding: 0;
-      padding-bottom: 30px;
-      padding-top: 15px;
-    }
-  }
-
-  &__btn {
-    font-size: @main-font-size;
-    line-height: 16px;
-    background: none;
-    padding: 16px 45px;
-  }
-
-  @media (min-width: @tablet-width) {
-    &__checkbox,
-    &__radiobutton {
-      padding-left: 80px;
-
-      input[type="checkbox"] + .checkbox-indicator,
-      input[type="radio"] + .radiobutton-indicator {
-        top: -3px;
-        width: 48px;
-        height: 48px;
-      }
-
-      input[type="checkbox"]:checked + .checkbox-indicator::before,
-      input[type="checkbox"]:checked + .checkbox-indicator::after {
-        top: 10px;
-        left: 8px;
-        width: 48px;
-        height: 48px;
-      }
     }
 
-    &__radiobutton {
-      input[type="radio"] + .radiobutton-indicator {
-        top: -3px;
-        left: -3px;
-        border-radius: 50%;
-      }
-
-      input[type="radio"]:checked + .radiobutton-indicator::before,
-      input[type="radio"]:checked + .radiobutton-indicator::after {
-        top: 14px;
-        left: 14px;
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    &__description {
-      width: 620px;
-      font-size: @main-font-size;
-      line-height: 30px;
-      padding-top: 62px;
-    }
-
-    &__fieldset {
-      padding: 60px 0;
-
-      &-wrapper {
-        display: flex;
-        align-items: baseline;
-
-        &--client-contacts,
-        &--addition {
-          flex-direction: column;
-        }
-      }
-
-      &-title {
-        width: 170px;
-
-        &::before {
-          display: none;
-        }
-      }
-
-      &--type {
-        padding-bottom: 25px;
-      }
-
-      &-tel,
-      &-mail {
-        display: flex;
-        align-items: baseline;
-      }
-
-      &--color,
-      &--client-contacts {
-        background: #f1f1f1;
-        padding-bottom: 20px;
-        padding-top: 53px;
-      }
-
-      &--client-contacts {
-        padding-top: 52px;
-      }
-
-      &--client-fio {
-        padding-bottom: 25px;
-        padding-top: 52px;
-      }
-
-      &--addition {
-        padding-top: 55px;
-        padding-bottom: 35px;
-      }
-    }
-
-    &__list-item--fio,
-    &__list-item--contacts {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-
-      label {
-        margin-right: 20px;
-      }
-
-      input {
-        flex-grow: 1;
-        padding-left: 20px;
-      }
-    }
-
-    &__list-item--contacts {
-      input {
-        background: #f1f1f1;
-      }
-    }
-
-    &__list {
-      width: 500px;
-
-      input[type="text"],
-      input[type="tel"],
-      input[type="email"] {
-        font-size: 19px;
-      }
-
-      &-phone {
-        margin: 0;
-      }
-
-      &-color {
-        width: 450px;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-      &-item {
-        font-size: 19px;
-        margin-bottom: 22px;
-
-        &--type {
-          width: 334px;
-          margin-bottom: 35px;
-        }
-
-        &--color {
-          width: 188px;
-          margin-bottom: 36px;
-        }
-      }
-    }
-
-    &__phone-icon,
-    &__mail-icon {
-      bottom: 14px;
-      right: 28px;
-    }
-
-    &__addition {
-      display: flex;
-      align-items: baseline;
-
-      textarea {
-        font-size: 19px;
-      }
-    }
-
-    &__require {
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 30px;
-      padding-bottom: 0;
-
-      &-text {
-        font-size: @main-font-size;
-      }
-    }
-
-    &__btn {
-      padding: 16px 30px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &__description {
-      width: 680px;
-      padding: 0;
-      padding-top: 100px;
-      margin-left: 175px;
-    }
-
-    &__fieldset {
-      &-title {
-        text-align: center;
-      }
-
-      &--type {
-        padding-top: 63px;
-      }
-
-      &--client-fio {
-        padding-top: 50px;
-      }
-
-      &--addition {
-        padding-bottom: 40px;
-      }
-    }
-
-    &__list {
-      width: 700px;
-      margin-left: 5px;
-
-      &-item {
-        &--type {
-          margin-left: 2px;
-        }
-
-        &--fio {
-          label {
-            margin-right: 25px;
-          }
-        }
-      }
-    }
-
-    &__list-color {
-      width: 713px;
-      margin-left: 7px;
+    &-color {
+      width: 450px;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    &__require {
-      width: 700px;
-      margin-left: 175px;
-      padding-top: 25px;
+    &-item {
+      font-size: 19px;
+      margin-bottom: 22px;
+
+      &--type {
+        width: 334px;
+        margin-bottom: 35px;
+      }
+
+      &--color {
+        width: 188px;
+        margin-bottom: 36px;
+      }
+    }
+  }
+
+  .order-form__phone-icon,
+  .order-form__mail-icon {
+    bottom: 14px;
+    right: 28px;
+  }
+
+  .order-form__addition {
+    display: flex;
+    align-items: baseline;
+
+    textarea {
+      font-size: 19px;
+    }
+  }
+
+  .order-form__require {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    &-text {
+      font-size: @main-font-size;
+    }
+  }
+
+  .order-form__btn {
+    padding: 16px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__description {
+    width: 680px;
+    padding: 0;
+    padding-top: 100px;
+    margin-left: 175px;
+  }
+
+  .order-form__fieldset {
+    &-title {
+      text-align: center;
     }
 
-    &__phone-icon,
-    &__mail-icon {
-      right: 0;
+    &--type {
+      padding-top: 63px;
     }
+
+    &--client-fio {
+      padding-top: 50px;
+    }
+
+    &--addition {
+      padding-bottom: 40px;
+    }
+  }
+
+  .order-form__list {
+    width: 700px;
+    margin-left: 5px;
+
+    &-item {
+      &--type {
+        margin-left: 2px;
+      }
+
+      &--fio {
+        label {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+
+  .order-form__list-color {
+    width: 713px;
+    margin-left: 7px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .order-form__require {
+    width: 700px;
+    margin-left: 175px;
+    padding-top: 25px;
+  }
+
+  .order-form__phone-icon,
+  .order-form__mail-icon {
+    right: 0;
   }
 }
