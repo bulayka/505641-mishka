@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Mishka-form</title>
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="/fonts/opensans.woff2" as="font">
@@ -99,7 +100,6 @@
             </ul>
           </div>
         </fieldset>
-
         <fieldset class="order-form__fieldset order-form__fieldset--color">
           <div class="order-form__wrapper order-form__fieldset-wrapper">
             <span class="order-form__fieldset-title">Цвет</span>
@@ -149,7 +149,6 @@
             </ul>
           </div>
         </fieldset>
-
         <fieldset class="order-form__fieldset order-form__fieldset--client-fio">
           <div class="order-form__wrapper order-form__fieldset-wrapper">
             <span class="order-form__fieldset-title">ФИО</span>
@@ -169,14 +168,13 @@
             </ul>
           </div>
         </fieldset>
-
         <fieldset class="order-form__fieldset order-form__fieldset--client-contacts">
           <div class="order-form__wrapper order-form__fieldset-wrapper order-form__fieldset-wrapper--client-contacts">
             <div class="order-form__fieldset-tel">
               <span class="order-form__fieldset-title order-form__fieldset-title--tel">ТЕЛ</span>
               <ul class="order-form__list order-form__list-phone">
                 <li class="order-form__list-item order-form__list-item--contacts">
-                  <input type="text" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
+                  <input type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 ХХХ ХХ ХХ*" required>
                   <svg class="order-form__phone-icon" width="25" height="24">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
@@ -187,7 +185,7 @@
               <span class="order-form__fieldset-title">E-MAIL</span>
               <ul class="order-form__list order-form__list-mail">
                 <li class="order-form__list-item order-form__list-item--contacts">
-                  <input type="text" name="mail" placeholder="Ваш Email*">
+                  <input type="email" name="email" placeholder="Ваш Email*" required>
                   <svg class="order-form__mail-icon" width="32" height="32">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>
@@ -196,7 +194,6 @@
             </div>
           </div>
         </fieldset>
-
         <fieldset class="order-form__fieldset order-form__fieldset--addition">
           <div class="order-form__wrapper order-form__fieldset-wrapper order-form__fieldset-wrapper--addition">
             <div class="order-form__addition">
@@ -215,7 +212,6 @@
         </fieldset>
       </form>
     </main>
-
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
@@ -235,7 +231,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <svg width="15" height="28">
+                <svg class="icon-fb" width="15" height="28">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Фейсбуке</span>
@@ -243,7 +239,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://www.instagram.com/htmlacademy">
-                <svg class="icon-insta" width="24" height="20">
+                <svg class="icon-twitter" width="24" height="20">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Инстаграме</span>
@@ -254,7 +250,7 @@
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34">
+            <svg class="logo-htmlacademy" width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
