@@ -74,15 +74,17 @@
     &:hover {
       background-color: @color-lightgreen-hover;
 
-      .products__list-item--link {
-        svg {
-          fill: #29a592;
-        }
+      svg {
+        fill: #29a592;
       }
     }
 
     &:active {
-      opacity: 0.3;
+      color: rgba(255, 255, 255, 0.3);
+
+      svg {
+        opacity: 0.3;
+      }
     }
   }
 }
