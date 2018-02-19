@@ -119,6 +119,11 @@
     }
   }
 
+  input[type="checkbox"]:focus + .checkbox-indicator,
+  input[type="radio"]:focus + .radiobutton-indicator {
+    border: 2px solid @color-lightgreen;
+  }
+
   input[type="checkbox"]:checked + .checkbox-indicator::before,
   input[type="checkbox"]:checked + .checkbox-indicator::after {
     content: "";
